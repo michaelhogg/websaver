@@ -49,7 +49,7 @@ static long const DEFAULT_REFRESH_UNITS = REFRESH_MINUTES;
 		webView = [[WebView alloc] initWithFrame:[self bounds] frameName:nil groupName:nil];
         WebPreferences *p = [webView preferences];
         if ([p respondsToSelector:@selector(setWebGLEnabled:)]) {
-            [p setWebGLEnabled:YES];
+            [p performSelector:@selector(setWebGLEnabled:) withObject:[NSNumber numberWithBool:YES]];
         }
         [webView setFrameLoadDelegate:self];
 		[self addSubview:webView];
