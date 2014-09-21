@@ -7,20 +7,24 @@ You can specify a web url as screen saver.
 
 This version includes a simple Preferences sheet.
 
+WebGL is supported (thanks to [cggaurav](https://github.com/cggaurav/WebSaver/commit/84447cd)).
+
 Instructions
 ------------
 
-Install the pre-built version of WebSaver by double-clicking "WebSaver/build/Release/Web.saver".
+1. Open **WebSaver.xcodeproj** in Xcode.
 
-Replace "Web.saver/Contents/Resources/index.html" with your own web page or application.
+2. Select **Build** in the **Product** menu. **WebSaver.saver** will be created at:
 
-To build from source, do the following:
+        /Users/.../Library/Developer/Xcode/DerivedData/WebSaver-.../Build/Products/Debug/WebSaver.saver
 
-1. Open WebSaver.xcodeproj in Xcode.
+3. Double-click **WebSaver.saver** to automatically install into System Preferences.
 
-2. Build.
+Occasionally, a screen saver won't work when installed automatically (this [issue](http://lists.apple.com/archives/cocoa-dev/2006/Oct/msg00936.html) has existed in OS X for years).
 
-3. Double-click the built Web.saver to install.
+To perform a manual installation, copy **WebSaver.saver** to:
+
+    /Users/.../Library/Screen Savers/
 
 Notes
 -----
